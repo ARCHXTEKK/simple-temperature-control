@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+@mixin Text($size: 24, $color: #fff, $family: 'Montserrat', $weight: 400) {
+    font-size: $size;
+    color: $color;
+    font-family: $family;
+    font-weight: $weight;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+body {
+}
+
+.container {
+    display: grid;
+    gap: 5px;
+    height: 550px;
+    width: 400px;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    "A A"
+    "A A"
+    "B C";
+    margin: 50px auto;
+    background: linear-gradient(#6a76bb, #6c83ce);
+    padding: 50px 50px 70px;
+    border-radius: 40px;
+    box-shadow: 30px -5px 100px rgba(0, 0, 0, 0.2);
+}
+
+.temperature {
+    grid-area: A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include Text(32px, #fff, 'Montserrat', 700);
+    background-color: #039ec5;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    
+}
+
+.temperature__content {
+    
+}
+
+.btn {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    background-color: #8b8b8b;
+    @include Text(36px, #fff);
+    transition: transform 0.1s linear;
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+#btn-decrement {
+    grid-area: B;
+    justify-self: start;
+}
+
+#btn-increment {
+    grid-area: C;
+    justify-self: end;
+}
+
+
+
+  
+  
