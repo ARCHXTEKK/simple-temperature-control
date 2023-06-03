@@ -14,9 +14,6 @@
     text-decoration: none;
   }
   
-body {
-}
-
 .container {
     display: grid;
     gap: 5px;
@@ -40,14 +37,21 @@ body {
     justify-content: center;
     align-items: center;
     @include Text(32px, #fff, 'Montserrat', 700);
-    background-color: #039ec5;
     border: 3px solid #fff;
     border-radius: 50%;
     
 }
 
-.temperature__content {
-    
+.cold {
+    background-color: #039ec5;
+}
+
+.neutral {
+    background-color: #5885af;
+}
+
+.hot {
+    background-color: #f08c52;
 }
 
 .btn {

@@ -29,9 +29,20 @@
   color: #fff;
   font-family: "Montserrat";
   font-weight: 700;
-  background-color: #039ec5;
   border: 3px solid #fff;
   border-radius: 50%;
+}
+
+.cold {
+  background-color: #039ec5;
+}
+
+.neutral {
+  background-color: #5885af;
+}
+
+.hot {
+  background-color: #f08c52;
 }
 
 .btn {
